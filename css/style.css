@@ -57,7 +57,7 @@ h1 {
 }
 
 .day-button .day-text {
-  position: relative;
+  position: absolute;
   color: #fff;
   font-size: 1.3em;
   font-weight: bold;
@@ -207,8 +207,8 @@ li {
 @media (max-width: 480px) {
   .day-button {
     width: 100%;
-    height: auto;
-    padding-bottom: 56.25%; /* Verhouding van 16:9 */
+    height: 120px; /* Maak de hoogte compacter */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     font-size: 1.2em;
   }
 
