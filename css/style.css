@@ -14,7 +14,7 @@ h1 {
   font-family: 'Rock Salt', cursive;
   font-size: 3em;
   margin-bottom: 30px;
-  font-size:20px;
+  font-size: 20px;
   text-shadow: 3px 3px 0px #e4cfa4, -1px -1px 0px #a27c48;
 }
 
@@ -26,6 +26,7 @@ h1 {
 }
 
 .day-button {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,12 +46,39 @@ h1 {
   background-color: #c29a78;
 }
 
+.day-button .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* zwarte overlay */
+  z-index: 0;
+}
+
+.day-button .day-text {
+  position: relative;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+  z-index: 1;
+  text-shadow: 1px 1px 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* Day button hover effect */
 .day-button:hover {
   transform: scale(1.1) rotate(-2deg);
   box-shadow: 8px 8px 20px rgba(0,0,0,0.7);
   background-color: #5c3b20;
 }
 
+/* Links */
 a {
   color: #7a5230;
   text-decoration: none;
@@ -63,6 +91,7 @@ a:hover {
   color: #dbcdb2;
 }
 
+/* Images */
 img {
   max-width: 90%;
   height: auto;
@@ -92,7 +121,7 @@ li {
   font-weight: bold;
 }
 
-/* Navigatie */
+/* Navigation */
 .navigatie {
   margin-top: 0;
   text-align: center;
@@ -146,27 +175,26 @@ li {
   text-decoration: underline;
 }
 
-
 /* Back-to-top */
 .back-to-top {
-      margin-top: 100px;
-      text-align: center;
-    }
+  margin-top: 100px;
+  text-align: center;
+}
 
 .back-to-top button {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-    }
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
 .back-to-top button:hover {
-      background-color: #555;
-    }
-	
+  background-color: #555;
+}
+
 /* Date */
 .datum-tijd {
   font-size: 1.1em;
@@ -177,6 +205,17 @@ li {
 
 /* Mobile Responsive */
 @media (max-width: 480px) {
+  .day-button {
+    width: 100%;
+    height: auto;
+    padding-bottom: 56.25%; /* Verhouding van 16:9 */
+    font-size: 1.2em;
+  }
+
+  .day-button .day-text {
+    font-size: 1.1em;
+  }
+
   .nav-button {
     flex: 1 1 100%;
     margin-bottom: 5px;
