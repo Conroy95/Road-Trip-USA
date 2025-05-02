@@ -1,10 +1,9 @@
 const CACHE_NAME = 'roadtrip-cache-v1';
+
 const urlsToCache = [
-  '/',
   'index.html',
   'css/style.css',
   'js/script.js',
-  // Images
   'img/stad1.jpg',
   'img/stad2.jpg',
   'img/stad3.jpg',
@@ -18,7 +17,6 @@ const urlsToCache = [
   'img/stad11.jpg',
   'img/stad12.jpg',
   'img/stad13.jpg',
-  // Pages
   '1.html',
   '2.html',
   '3.html',
@@ -33,35 +31,31 @@ const urlsToCache = [
   '12.html',
   '13.html',
   '14.html',
-  // Favicons
   'fav/favicon-96x96.png',
   'fav/favicon.svg',
   'fav/favicon.ico',
   'fav/apple-touch-icon.png',
-  'fav/site.webmanifest',  
+  'fav/site.webmanifest'
 ];
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        return cache.addAll(urlsToCache);
-      })
+    caches.open(CACHE_NAME).then(cache => {
+      return Promise.all(
+        urlsToCache.map(url =>
+          cache.add(url).catch(err => {
+            console.warn(`⚠️ Fout bij cachen van ${url}:`, err);
+          })
+        )
+      );
+    })
   );
 });
 
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        return response || fetch(event.request);
-      })
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request);
+    })
   );
 });
-
-
-urlsToCache.map(url =>
-  cache.add(url).catch(err => {
-    console.warn(`⚠️ Fout bij: ${url}`, err);
-  })
-)
