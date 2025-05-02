@@ -58,3 +58,10 @@ self.addEventListener('fetch', event => {
       })
   );
 });
+
+
+urlsToCache.map(url =>
+  cache.add(url).catch(err => {
+    console.warn(`⚠️ Fout bij: ${url}`, err);
+  })
+)
