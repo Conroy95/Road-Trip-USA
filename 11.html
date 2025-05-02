@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="fav/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="fav/favicon.svg" />
+	<link rel="shortcut icon" href="fav/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="Road Trip USA" />
+	<link rel="manifest" href="fav/site.webmanifest" />
+	<title>Page / Lake Powell</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Navigation -->
+	<div class="navigatie">	
+		<div class="nav-row">
+			<a href="index.html" class="nav-button">Home</a>
+			<a href="10.html" class="nav-button">◀ Bryce Canyon</a>
+			<span class="nav-button current" id="nav-link"></span>
+			<a href="12.html" class="nav-button">Grand Canyon ▶</a>
+		</div>
+		<br>
+		<div id="datum-tijd" class="datum-tijd">
+		</div>	
+	</div>
+
+<!-- Page -->	
+	<div class="stad">
+		<h1 id="kop"></h1>
+		<h2>Dag 16</h2>
+		<h3>21 Mei</h3>
+		<img src="img/stad11.jpg" alt="[Stad Naam]" style="width:90%; max-width:600px;">
+		<h3 id="intro-tekst"></h3>
+		<p>Page is een stad in Arizona, beroemd om Lake Powell en de indrukwekkende slotcanjons.</p>
+		<p>Het heeft een heet woestijnklimaat, met zomertemperaturen die vaak boven de 35°C liggen en milde winters rond de 5°C.</p>
+	</div>
+
+	<div class="hotel">
+		<h2>Hotel - Super 8 by Wyndham Page/Lake Powell</h2>
+		<img src="img/hotel11.jpg" alt="[Hotel Naam]" style="width:90%; max-width:600px;">
+		<p><b>Locatie:</b> 36.906088, -111.477257</p>	
+		<p>[Beschrijving van het hotel: locatie, bijzonderheden, ontbijt ja/nee, etc.]</p>
+	</div>
+	
+<!-- Activities -->
+	<div class="activiteiten">
+		<h2>Dag 16 - 21 Mei: <br>Uitstapjes & Dingen om te Doen</h2>
+		<ul>
+		  <li><b>Welcome to Utah Sign</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=37.002760,-111.573880" target="_blank">37.002760, -111.573880</a></li>
+		  <li><b>Glen Canyon Dam Bridge</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=36.935999,-111.482939" target="_blank">36.935999, -111.482939</a></li>
+		  <li><b>Bryce Canyon National Park Visitor Center</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=37.640454,-112.169581" target="_blank">37.640454, -112.169581</a></li>
+		  <li><b>Glen Canyon Dam Overlook</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=36.923973,-111.477285" target="_blank">36.923973, -111.477285</a></li>
+		  <li><b>Walmart Supercenter - Page</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=36.904933,-111.487001" target="_blank">36.904933, -111.487001</a></li>
+		  <li><b>Vermilion Cliffs National Monument</b> <br><b>Locatie:</b> Unknown</li>
+		  <li><b>Tankstation vlakbij het hotel</b> <br><b>Locatie:</b> Unknown</li>
+		  <li><b>Horseshoe Bend</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=36.876361,-111.502739" target="_blank">36.876361, -111.502739</a></li>
+		</ul>
+	</div>
+	
+<!-- Back to top -->
+	<div class="back-to-top">
+		<button onclick="scrollToTop()">⬆ Terug naar boven</button>
+	</div>
+
+<!-- Title Variable -->
+<script> 
+  // Haal de inhoud van de <title> tag op
+    const titel = document.title;
+
+  // Zet de titel op meerdere plekken
+    document.getElementById("kop").textContent = "Locatie- " + titel;
+    document.getElementById("nav-link").textContent = titel;
+    document.getElementById("intro-tekst").textContent = "Welkom in " + titel;
+</script>
+
+<!-- Script -->
+<script src="js/script.js"></script>
+</body>
+</html>

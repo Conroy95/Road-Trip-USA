@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="fav/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="fav/favicon.svg" />
+	<link rel="shortcut icon" href="fav/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="Road Trip USA" />
+	<link rel="manifest" href="fav/site.webmanifest" />
+	<title>Death Valley</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Navigation -->
+	<div class="navigatie">	
+		<div class="nav-row">
+			<a href="index.html" class="nav-button">Home</a>
+			<a href="6.html" class="nav-button">◀ Visalia</a>
+			<span class="nav-button current" id="nav-link"></span>
+			<a href="8.html" class="nav-button">Las Vegas ▶</a>
+		</div>
+		<br>
+		<div id="datum-tijd" class="datum-tijd">
+		</div>	
+	</div>
+
+<!-- Page -->	
+	<div class="stad">
+		<h1 id="kop"></h1>
+		<h2>Dag 10</h2>
+		<h3>15 Mei</h3>
+		<img src="img/stad7.jpg" alt="[Stad Naam]" style="width:90%; max-width:600px;">
+		<h3 id="intro-tekst"></h3>
+		<p>Death Valley is een woestijngebied in Californië, beroemd om zijn extreme hitte en unieke landschappen.</p>
+		<p>Het heeft het heetste klimaat in Noord-Amerika, met temperaturen die in de zomer vaak boven de 40°C stijgen.</p>
+	</div>
+
+	<div class="hotel">
+		<h2>Hotel - The Ranch at Death Valley</h2>
+		<img src="img/hotel7.jpg" alt="[Hotel Naam]" style="width:90%; max-width:600px;">
+		<p><b>Locatie:</b> 36.456951, -116.865668</p>	
+		<p>[Beschrijving van het hotel: locatie, bijzonderheden, ontbijt ja/nee, etc.]</p>
+	</div>
+	
+<!-- Activities -->
+	<div class="activiteiten">
+		<h2>Dag 10 - 15 Mei: <br>Uitstapjes & Dingen om te Doen</h2>
+		<ul>
+		  <li><b>McDonald's - Tehachapi</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.126154,-118.408347" target="_blank">35.126154, -118.408347</a></li>
+		  <li><b>Tankstation Love's - Tehachapi</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.126403,-118.408090" target="_blank">35.126403, -118.408090</a></li>
+		  <li><b>Harmony Borax Works Historical Marker</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=36.479883,-116.875507" target="_blank">36.479883, -116.875507</a></li>
+		  <li><b>Last Kind Words Saloon</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=36.456497,-116.865955" target="_blank">36.456497, -116.865955</a></li>
+		  <li><b>Sourdough Saloon</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=36.909089,-116.758984" target="_blank">36.909089, -116.758984</a></li>
+		  <li><b>Death Valley Nut & Candy Co</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=36.913532,-116.753716" target="_blank">36.913532, -116.753716</a></li>
+		  <li><b>Rhyolite Train Depot</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=36.903429,-116.828824" target="_blank">36.903429, -116.828824</a></li>
+		  <li><b>Tankstation vlakbij het hotel</b> <br><b>Locatie:</b> Unknown</li>
+		</ul>
+	</div>
+	
+<!-- Back to top -->
+	<div class="back-to-top">
+		<button onclick="scrollToTop()">⬆ Terug naar boven</button>
+	</div>
+
+<!-- Title Variable -->
+<script> 
+  // Haal de inhoud van de <title> tag op
+    const titel = document.title;
+
+  // Zet de titel op meerdere plekken
+    document.getElementById("kop").textContent = "Locatie- " + titel;
+    document.getElementById("nav-link").textContent = titel;
+    document.getElementById("intro-tekst").textContent = "Welkom in " + titel;
+</script>
+
+<!-- Script -->
+<script src="js/script.js"></script>
+</body>
+</html>

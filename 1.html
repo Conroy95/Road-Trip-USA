@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="fav/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="fav/favicon.svg" />
+	<link rel="shortcut icon" href="fav/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="Road Trip USA" />
+	<link rel="manifest" href="fav/site.webmanifest" />
+	<title>Los Angeles</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Navigation -->
+	<div class="navigatie">	
+		<div class="nav-row">
+			<a href="index.html" class="nav-button">Home</a>
+			<a href="index.html" class="nav-button">◀ Home</a>
+			<span class="nav-button current" id="nav-link"></span>
+			<a href="2.html" class="nav-button">Cambria ▶</a>
+		</div>
+		<br>
+		<div id="datum-tijd" class="datum-tijd">
+		</div>	
+	</div>
+	
+<!-- Page -->	
+	<div class="stad">
+		<h1 id="kop"></h1>		
+			<div id="datum-tijd" class="datum-tijd"></div>		
+		<h2>Dag 1</h2>
+		<h3>6 Mei</h3>
+		<img src="img/stad1.jpg" alt="[Stad Naam]" style="width:90%; max-width:600px;">
+		<h3 id="intro-tekst"></h3>
+		<p>Los Angeles is een wereldstad in Zuid-Californië, bekend om Hollywood en de entertainmentindustrie.</p>
+		<p>De stad heeft een levendige cultuur en een zonnig klimaat met temperaturen tussen 15°C en 25°C.</p>
+	</div>
+
+	<div class="hotel">
+		<h2>Hotel - Hampton Inn By Hilton Los Angeles Airport</h2>
+		<img src="img/hotel1.jpg" alt="[Hotel Naam]" style="width:90%; max-width:600px;">
+		<p><b>Locatie:</b> 33.942722, -118.369611</p>
+		<p>[Beschrijving van het hotel: locatie, bijzonderheden, ontbijt ja/nee, etc.]</p>
+	</div>
+	
+<!-- Activities -->
+	<div class="activiteiten">
+		<h2>Dag 1 - 6 Mei: <br>Uitstapjes & Dingen om te Doen</h2>
+		<ul>
+			<li>Naar Boston > Los Angeles</li>
+		</ul>
+	</div>
+	
+<!-- Back to top -->
+	<div class="back-to-top">
+		<button onclick="scrollToTop()">⬆ Terug naar boven</button>
+	</div>
+
+<!-- Title Variable -->
+<script> 
+  // Haal de inhoud van de <title> tag op
+    const titel = document.title;
+
+  // Zet de titel op meerdere plekken
+    document.getElementById("kop").textContent = "Locatie- " + titel;
+    document.getElementById("nav-link").textContent = titel;
+    document.getElementById("intro-tekst").textContent = "Welkom in " + titel;
+</script>
+
+<!-- Script -->
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Rock+Salt&display=swap');
+
+body {
+  font-family: 'Special Elite', cursive;
+  background: url('../img/background-paper.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #4b2e14;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 3em;
+  margin-bottom: 30px;
+  font-size:20px;
+  text-shadow: 3px 3px 0px #e4cfa4, -1px -1px 0px #a27c48;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.day-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  color: #fffbe0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.6em;
+  background-size: cover;
+  background-position: center;
+  border: 6px solid #7a5230;
+  border-radius: 12px;
+  background-blend-mode: multiply;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  transition: all 0.3s ease;
+  background-color: #c29a78;
+}
+
+.day-button:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 8px 8px 20px rgba(0,0,0,0.7);
+  background-color: #5c3b20;
+}
+
+a {
+  color: #7a5230;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #dbcdb2;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+  border: 8px solid #7a5230;
+  border-radius: 12px;
+  box-shadow: 6px 6px 15px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+.stad, .hotel, .activiteiten {
+  margin-bottom: 40px;
+}
+
+ul {
+  list-style-type: "⭐ ";
+  padding-left: 20px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+.location {
+  font-weight: bold;
+}
+
+/* Navigatie */
+.navigatie {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1em;
+}
+
+.nav-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.nav-button {
+  background-color: #f5e1c5;
+  border: 1px solid #7a5230;
+  color: #4b2e14;
+  padding: 6px 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 0.95em;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #e3c59f;
+}
+
+.current {
+  background-color: #c4a173;
+  cursor: default;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.nav-home {
+  margin-top: 8px;
+}
+
+.nav-home a {
+  font-size: 0.95em;
+  color: #7a5230;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-home a:hover {
+  text-decoration: underline;
+}
+
+
+/* Back-to-top */
+.back-to-top {
+      margin-top: 100px;
+      text-align: center;
+    }
+
+.back-to-top button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+.back-to-top button:hover {
+      background-color: #555;
+    }
+	
+/* Date */
+.datum-tijd {
+  font-size: 1.1em;
+  color: #5a3e1b;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .nav-button {
+    flex: 1 1 100%;
+    margin-bottom: 5px;
+  }
+}

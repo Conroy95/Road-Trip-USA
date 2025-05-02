@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="fav/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="fav/favicon.svg" />
+	<link rel="shortcut icon" href="fav/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="Road Trip USA" />
+	<link rel="manifest" href="fav/site.webmanifest" />
+	<title>Bryce Canyon</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Navigation -->
+	<div class="navigatie">	
+		<div class="nav-row">
+			<a href="index.html" class="nav-button">Home</a>
+			<a href="9.html" class="nav-button">◀ Zion - Mount Carmel</a>
+			<span class="nav-button current" id="nav-link"></span>
+			<a href="11.html" class="nav-button">Page / Lake Powell ▶</a>
+		</div>
+		<br>
+		<div id="datum-tijd" class="datum-tijd">
+		</div>	
+	</div>
+
+<!-- Page -->	
+	<div class="stad">
+		<h1 id="kop"></h1>
+		<h2>Dag 15</h2>
+		<h3>20 Mei</h3>
+		<img src="img/stad10.jpg" alt="[Stad Naam]" style="width:90%; max-width:600px;">
+		<h3 id="intro-tekst"></h3>
+		<p>Bryce Canyon is een nationaal park in Utah, bekend om zijn unieke rotsformaties, de zogenaamde hoodoos.</p>
+		<p>Het heeft een koel bergklimaat, met zomertemperaturen tussen 15°C en 25°C en koude winters die vaak onder het vriespunt liggen.</p>
+	</div>
+
+	<div class="hotel">
+		<h2>Hotel - Bryce View Lodge</h2>
+		<img src="img/hotel10.jpg" alt="[Hotel Naam]" style="width:90%; max-width:600px;">
+		<p><b>Locatie:</b> 37.673706, -112.153721</p>	
+		<p>[Beschrijving van het hotel: locatie, bijzonderheden, ontbijt ja/nee, etc.]</p>
+	</div>
+	
+<!-- Activities -->
+	<div class="activiteiten">
+		<h2>Dag 15 - 20 Mei: <br>Uitstapjes & Dingen om te Doen</h2>
+		<ul>
+		  <li><b>Restaurant Aunt Sue's Chalet</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=37.523776,-112.667403" target="_blank">37.523776, -112.667403</a></li>
+		  <li><b>Mammoth Cave - Duck Creek Village</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=37.568210,-112.588189" target="_blank">37.568210, -112.588189</a></li>
+		  <li><b>DC Pub & Grill</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=37.524824,-112.665728" target="_blank">37.524824, -112.665728</a></li>
+		  <li><b>Aspen-Mirror Lake</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=37.523968,-112.674089" target="_blank">37.523968, -112.674089</a></li>
+		  <li><b>Ebenezer's Barn and Grill Dinner Show</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=37.672183,-112.154140" target="_blank">37.672183, -112.154140</a></li>
+		  <li><b>Bryce Canyon Sinclair Gas Station/ Mini Mart</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=37.671870,-112.156427" target="_blank">37.671870, -112.156427</a></li>
+		  <li><b>Old Bryce Town</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=37.673309,-112.156233" target="_blank">37.673309, -112.156233</a></li>
+		  <li><b>Tankstation vlakbij het hotel</b> <br><b>Locatie:</b> Unknown</li>
+		</ul>
+	</div>
+	
+<!-- Back to top -->
+	<div class="back-to-top">
+		<button onclick="scrollToTop()">⬆ Terug naar boven</button>
+	</div>
+
+<!-- Title Variable -->
+<script> 
+  // Haal de inhoud van de <title> tag op
+    const titel = document.title;
+
+  // Zet de titel op meerdere plekken
+    document.getElementById("kop").textContent = "Locatie- " + titel;
+    document.getElementById("nav-link").textContent = titel;
+    document.getElementById("intro-tekst").textContent = "Welkom in " + titel;
+</script>
+
+<!-- Script -->
+<script src="js/script.js"></script>
+</body>
+</html>

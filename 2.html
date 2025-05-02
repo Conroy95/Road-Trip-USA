@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="fav/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="fav/favicon.svg" />
+	<link rel="shortcut icon" href="fav/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="Road Trip USA" />
+	<link rel="manifest" href="fav/site.webmanifest" />
+	<title>Cambria</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Navigation -->
+	<div class="navigatie">	
+		<div class="nav-row">
+			<a href="index.html" class="nav-button">Home</a>
+			<a href="1.html" class="nav-button">◀ Los Angeles</a>
+			<span class="nav-button current" id="nav-link"></span>
+			<a href="3.html" class="nav-button">Monterey ▶</a>
+		</div>
+		<br>
+		<div id="datum-tijd" class="datum-tijd">
+		</div>	
+	</div>
+
+<!-- Page -->	
+	<div class="stad">
+		<h1 id="kop"></h1>		
+		<h2>Dag 2</h2>
+		<h3>7 Mei</h3>
+		<img src="img/stad2.jpg" alt="[Stad Naam]" style="width:90%; max-width:600px;">
+		<h3 id="intro-tekst"></h3>
+		<p>Cambria is een charmant kustplaatsje aan de centrale kust van Californië, bekend om zijn kunstgalerijen en dennenbossen.</p>
+		<p>Het heeft een mild zeeklimaat met temperaturen tussen 10°C en 20°C.</p>
+	</div>
+
+	<div class="hotel">
+		<h2>Hotel - Cambria Pines Lodge</h2>
+		<img src="img/hotel2.jpg" alt="[Hotel Naam]" style="width:90%; max-width:600px;">
+		<p><b>Locatie:</b> 35.558722, -121.080111</p>
+		<p>[Beschrijving van het hotel: locatie, bijzonderheden, ontbijt ja/nee, etc.]</p>
+	</div>
+	
+<!-- Activities -->
+	<div class="activiteiten">
+		<h2>Dag 2 - 7 Mei: <br>Uitstapjes & Dingen om te Doen</h2>
+		<ul>
+		  <li><b>Malibu Beach</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=34.038628,-118.656937" target="_blank">34.038628, -118.656937</a></li>
+		  <li><b>Santa Barbara</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=34.412016,-119.688931" target="_blank">34.412016, -119.688931</a></li>
+		  <li><b>Vandenberg Space Force Base Visitor Center</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=34.750844,-120.521783" target="_blank">34.750844, -120.521783</a></li>
+		  <li><b>Pismo Beach Pier</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.139131,-120.642575" target="_blank">35.139131, -120.642575</a></li>
+		  <li><b>Lampton Cliffs Park</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.542229,-121.092208" target="_blank">35.542229, -121.092208</a></li>
+		  <li><b>Bluff Trail</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.547617,-121.097113" target="_blank">35.547617, -121.097113</a></li>
+		  <li><b>Fiscalini Ranch Preserve bluff trail</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.556191,-121.102433" target="_blank">35.556191, -121.102433</a></li>
+		  <li><b>Restaurant Las Cambritas</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.564412,-121.081088" target="_blank">35.564412, -121.081088</a></li>
+		  <li><b>Luigi's Pizza</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.563244,-121.089920" target="_blank">35.563244, -121.089920</a></li>
+		  <li><b>Moonstone Beach Bar & Grill</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.577251,-121.114294" target="_blank">35.577251, -121.114294</a></li>
+		  <li><b>Tankstation vlakbij het hotel</b> <br><b>Locatie:</b> Unknown</li>
+		</ul>
+	</div>
+	
+<!-- Back to top -->
+	<div class="back-to-top">
+		<button onclick="scrollToTop()">⬆ Terug naar boven</button>
+	</div>
+
+<!-- Title Variable -->
+<script> 
+  // Haal de inhoud van de <title> tag op
+    const titel = document.title;
+
+  // Zet de titel op meerdere plekken
+    document.getElementById("kop").textContent = "Locatie- " + titel;
+    document.getElementById("nav-link").textContent = titel;
+    document.getElementById("intro-tekst").textContent = "Welkom in " + titel;
+</script>
+
+<!-- Script -->
+<script src="js/script.js"></script>
+</body>
+</html>

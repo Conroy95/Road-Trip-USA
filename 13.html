@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="fav/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="fav/favicon.svg" />
+	<link rel="shortcut icon" href="fav/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="Road Trip USA" />
+	<link rel="manifest" href="fav/site.webmanifest" />
+	<title>Kingman</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Navigation -->
+	<div class="navigatie">	
+		<div class="nav-row">
+			<a href="index.html" class="nav-button">Home</a>
+			<a href="12.html" class="nav-button">◀ Grand Canyon</a>
+			<span class="nav-button current" id="nav-link"></span>
+			<a href="14.html" class="nav-button">Los Angeles ▶</a>
+		</div>
+		<br>
+		<div id="datum-tijd" class="datum-tijd">
+		</div>	
+	</div>
+
+<!-- Page -->	
+	<div class="stad">
+		<h1 id="kop"></h1>
+		<h2>Dag 18</h2>
+		<h3>23 Mei</h3>
+		<img src="img/stad13.jpg" alt="[Stad Naam]" style="width:90%; max-width:600px;">
+		<h3 id="intro-tekst"></h3>
+		<p>Kingman is een stad in het westen van Arizona, gelegen langs de legendarische Route 66.</p>
+		<p>Het heeft een heet woestijnklimaat, met zomertemperaturen die vaak boven de 35°C liggen en milde winters rond de 5°C.</p>
+	</div>
+
+	<div class="hotel">
+		<h2>Hotel - Best Western Plus A Wayfarer's Inn And Suites</h2>
+		<img src="img/hotel13.jpg" alt="[Hotel Naam]" style="width:90%; max-width:600px;">
+		<p><b>Locatie:</b> 35.211234, -114.016827</p>	
+		<p>[Beschrijving van het hotel: locatie, bijzonderheden, ontbijt ja/nee, etc.]</p>
+	</div>
+	
+<!-- Activities -->
+	<div class="activiteiten">
+		<h2>Dag 18 - 23 Mei: <br>Uitstapjes & Dingen om te Doen</h2>
+		<ul>
+		  <li><b>Raptor Ranch - Williams</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.653748,-112.140156" target="_blank">35.653748, -112.140156</a></li>
+		  <li><b>Love's Travel Stop - Williams</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.262850,-112.194208" target="_blank">35.262850, -112.194208</a></li>
+		  <li><b>Maverik Adventure's First Stop - Williams</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.260942,-112.192672" target="_blank">35.260942, -112.192672</a></li>
+		  <li><b>Johnson's Travel Center - Seligman</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.309376,-112.856751" target="_blank">35.309376, -112.856751</a></li>
+		  <li><b>Petro Travel Center - Kingman</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.177996,-113.788818" target="_blank">35.177996, -113.788818</a></li>
+		  <li><b>Love's Travel Stop - Kingman</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.199143,-113.903981" target="_blank">35.199143, -113.903981</a></li>
+		  <li><b>Historic Route 66 Downtown Sign - Kingman</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.186973,-114.040185" target="_blank">35.186973, -114.040185</a></li>
+		  <li><b>Kingman Visitor Center - Kingman</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.189010,-114.058658" target="_blank">35.189010, -114.058658</a></li>
+		  <li><b>Arizona Route 66 Museum - Kingman</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.189131,-114.058852" target="_blank">35.189131, -114.058852</a></li>
+		  <li><b>Santa Fe Steam Engine - Kingman</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.189891,-114.058426" target="_blank">35.189891, -114.058426</a></li>
+		  <li><b>Mike's Route 66 Outpost Saloon & RV Park - Kingman</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.394785,-113.841213" target="_blank">35.394785, -113.841213</a></li>
+		  <li><b>Grandpa's Kitchen - Kingman</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.254085,-114.009803" target="_blank">35.254085, -114.009803</a></li>
+		  <li><b>Olympus Diner - Kingman</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.196110,-114.010850" target="_blank">35.196110, -114.010850</a></li>
+		  <li><b>Cracker Barrel Old Country Store - Kingman</b> <br><b>Locatie:</b> <a href="https://www.google.com/maps?q=35.225605,-114.035602" target="_blank">35.225605, -114.035602</a></li>
+		  <li><b>Tankstation vlakbij het hotel</b> <br><b>Locatie:</b> Unknown</li>
+		</ul>
+	</div>
+	
+<!-- Back to top -->
+	<div class="back-to-top">
+		<button onclick="scrollToTop()">⬆ Terug naar boven</button>
+	</div>
+
+<!-- Title Variable -->
+<script> 
+  // Haal de inhoud van de <title> tag op
+    const titel = document.title;
+
+  // Zet de titel op meerdere plekken
+    document.getElementById("kop").textContent = "Locatie- " + titel;
+    document.getElementById("nav-link").textContent = titel;
+    document.getElementById("intro-tekst").textContent = "Welkom in " + titel;
+</script>
+
+<!-- Script -->
+<script src="js/script.js"></script>
+</body>
+</html>
