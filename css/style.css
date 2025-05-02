@@ -182,3 +182,28 @@ li {
     margin-bottom: 5px;
   }
 }
+
+
+/* ################################## */
+/* Overlay toevoegen voor de mobiele weergave */
+@media (max-width: 480px) {
+  .day-button {
+    position: relative;
+  }
+
+  .day-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* donkere overlay */
+    border-radius: 12px;
+    z-index: 0;
+  }
+
+  .day-button .day-text {
+    z-index: 1; /* Zorgt ervoor dat de tekst boven de overlay blijft */
+  }
+}
