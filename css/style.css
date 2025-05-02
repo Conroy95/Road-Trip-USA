@@ -14,7 +14,7 @@ h1 {
   font-family: 'Rock Salt', cursive;
   font-size: 3em;
   margin-bottom: 30px;
-  font-size:20px;
+  font-size: 20px;
   text-shadow: 3px 3px 0px #e4cfa4, -1px -1px 0px #a27c48;
 }
 
@@ -25,6 +25,7 @@ h1 {
   gap: 20px;
 }
 
+/* Button Styling */
 .day-button {
   display: flex;
   align-items: center;
@@ -40,15 +41,50 @@ h1 {
   border: 6px solid #7a5230;
   border-radius: 12px;
   background-blend-mode: multiply;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease;
   background-color: #c29a78;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Overlay voor een donkere achtergrond */
+.day-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);  /* Donkere overlay */
+  z-index: 1;  /* Overlay moet boven de afbeelding komen */
+}
+
+/* Zorgen dat de tekst boven de overlay komt */
+.day-button span {
+  position: relative;
+  z-index: 2;  /* Tekst komt boven de overlay */
+}
+
+/* Hover-effect voor knoppen */
 .day-button:hover {
   transform: scale(1.1) rotate(-2deg);
-  box-shadow: 8px 8px 20px rgba(0,0,0,0.7);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7);
   background-color: #5c3b20;
+}
+
+/* Verkleinen van de knop en tekst op mobiel */
+@media (max-width: 480px) {
+  .day-button {
+    width: 150px;
+    height: 150px;
+    font-size: 1.2em;  /* Verklein de tekst op mobiel */
+  }
+
+  /* Maak de overlay iets sterker op mobiel voor betere leesbaarheid */
+  .day-button::before {
+    background: rgba(0, 0, 0, 0.5); 
+  }
 }
 
 a {
@@ -68,7 +104,7 @@ img {
   height: auto;
   border: 8px solid #7a5230;
   border-radius: 12px;
-  box-shadow: 6px 6px 15px rgba(0,0,0,0.5);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
 }
 
@@ -115,7 +151,7 @@ li {
   font-weight: 600;
   border-radius: 8px;
   text-decoration: none;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   font-size: 0.95em;
   transition: background-color 0.2s ease;
 }
@@ -146,27 +182,26 @@ li {
   text-decoration: underline;
 }
 
-
 /* Back-to-top */
 .back-to-top {
-      margin-top: 100px;
-      text-align: center;
-    }
+  margin-top: 100px;
+  text-align: center;
+}
 
 .back-to-top button {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-    }
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
 .back-to-top button:hover {
-      background-color: #555;
-    }
-	
+  background-color: #555;
+}
+
 /* Date */
 .datum-tijd {
   font-size: 1.1em;
@@ -180,30 +215,5 @@ li {
   .nav-button {
     flex: 1 1 100%;
     margin-bottom: 5px;
-  }
-}
-
-/* Overlay toevoegen voor de mobiele weergave */
-@media (max-width: 480px) {
-  .day-button {
-    position: relative;
-    color: #fffbe0; /* Zorgen voor witte tekst op mobiel voor betere zichtbaarheid */
-  }
-
-  .day-button::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Donkere overlay */
-    border-radius: 8px;
-    z-index: 0;
-  }
-
-  .day-button .day-text {
-    z-index: 1; /* Zorgt ervoor dat de tekst boven de overlay blijft */
-    color: #fff; /* Witte kleur voor tekst */
   }
 }
