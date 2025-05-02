@@ -43,7 +43,6 @@ h1 {
   box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
   transition: all 0.3s ease;
   background-color: #c29a78;
-  position: relative;
 }
 
 .day-button:hover {
@@ -52,35 +51,132 @@ h1 {
   background-color: #5c3b20;
 }
 
-.day-button .overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.4); /* zwarte overlay, 40% transparant */
+a {
+  color: #7a5230;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
-.day-button .day-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 1.3em;
+a:hover {
+  text-decoration: underline;
+  color: #dbcdb2;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+  border: 8px solid #7a5230;
+  border-radius: 12px;
+  box-shadow: 6px 6px 15px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+.stad, .hotel, .activiteiten {
+  margin-bottom: 40px;
+}
+
+ul {
+  list-style-type: "⭐ ";
+  padding-left: 20px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+.location {
   font-weight: bold;
-  z-index: 1;
-  text-shadow: 1px 1px 2px black;
+}
+
+/* Navigatie */
+.navigatie {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1em;
+}
+
+.nav-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.nav-button {
+  background-color: #f5e1c5;
+  border: 1px solid #7a5230;
+  color: #4b2e14;
+  padding: 6px 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 0.95em;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #e3c59f;
+}
+
+.current {
+  background-color: #c4a173;
+  cursor: default;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.nav-home {
+  margin-top: 8px;
+}
+
+.nav-home a {
+  font-size: 0.95em;
+  color: #7a5230;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-home a:hover {
+  text-decoration: underline;
+}
+
+
+/* Back-to-top */
+.back-to-top {
+      margin-top: 100px;
+      text-align: center;
+    }
+
+.back-to-top button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+.back-to-top button:hover {
+      background-color: #555;
+    }
+	
+/* Date */
+.datum-tijd {
+  font-size: 1.1em;
+  color: #5a3e1b;
+  margin-bottom: 20px;
+  font-style: italic;
 }
 
 /* Mobile Responsive */
 @media (max-width: 480px) {
-  .day-button {
-    width: 150px;
-    height: 150px;
-  }
-
-  .day-button .day-text {
-    font-size: 1em; /* Verkleint de tekst op mobiele apparaten */
-  }
-
   .nav-button {
     flex: 1 1 100%;
     margin-bottom: 5px;
