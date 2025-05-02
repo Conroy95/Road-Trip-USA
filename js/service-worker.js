@@ -35,11 +35,11 @@ const urlsToCache = [
   // etc. tot dag21.html
   
   // Favicons toevoegen:
-  '/fav/favicon-96x96.png',
-  '/fav/favicon.svg',
-  '/fav/favicon.ico',
-  '/fav/apple-touch-icon.png',
-  '/fav/site.webmanifest',
+  './fav/favicon-96x96.png',
+  './fav/favicon.svg',
+  './fav/favicon.ico',
+  './fav/apple-touch-icon.png',
+  './fav/site.webmanifest',
 ];
 
 self.addEventListener('install', event => {
