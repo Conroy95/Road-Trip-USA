@@ -183,12 +183,11 @@ li {
   }
 }
 
-
-/* ################################## */
 /* Overlay toevoegen voor de mobiele weergave */
 @media (max-width: 480px) {
   .day-button {
     position: relative;
+    color: #fffbe0; /* Zorgen voor witte tekst op mobiel voor betere zichtbaarheid */
   }
 
   .day-button::after {
@@ -198,12 +197,13 @@ li {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* donkere overlay */
-    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.4); /* Donkere overlay */
+    border-radius: 8px;
     z-index: 0;
   }
 
   .day-button .day-text {
     z-index: 1; /* Zorgt ervoor dat de tekst boven de overlay blijft */
+    color: #fff; /* Witte kleur voor tekst */
   }
 }
