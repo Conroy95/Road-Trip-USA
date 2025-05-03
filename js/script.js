@@ -28,3 +28,13 @@ function toonDatum() {
 }
 
 document.addEventListener("DOMContentLoaded", toonDatum);
+
+
+
+// Haal de inhoud van de <title> tag op
+    const titel = document.title;
+
+  // Zet de titel op meerdere plekken
+    document.getElementById("kop").textContent = "Locatie - " + titel;
+    document.getElementById("nav-link").textContent = "📍 " + titel;
+    document.getElementById("intro-tekst").textContent = "Welkom in " + titel;
